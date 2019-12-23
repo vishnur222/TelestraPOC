@@ -10,12 +10,12 @@ import UIKit
 
 class TACountryCustomCellViewTableViewCell: UITableViewCell {
 
-    var product : Product? {
+    var product : TAModelTitleRow? {
         didSet {
             
-            setImage(imageUrl: product?.productImage, placeHolder: "default")
-            productNameLabel.text = product?.productName
-            productDescriptionLabel.text = product?.productDesc
+            setImage(imageUrl: product?.imageHref, placeHolder: "default")
+            productNameLabel.text = product?.title
+            productDescriptionLabel.text = product?.description
         }
     }
     
