@@ -15,6 +15,7 @@
 		318F6D2823B0F00700652139 /* TACountryDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2723B0F00700652139 /* TACountryDetailsVC.swift */; };
 		318F6D2A23B0F03500652139 /* TAModelCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2923B0F03500652139 /* TAModelCountry.swift */; };
 		318F6D2C23B0F0B400652139 /* TAConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2B23B0F0B400652139 /* TAConstants.swift */; };
+		318F6D2F23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2E23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		318F6D2723B0F00700652139 /* TACountryDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TACountryDetailsVC.swift; sourceTree = "<group>"; };
 		318F6D2923B0F03500652139 /* TAModelCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAModelCountry.swift; sourceTree = "<group>"; };
 		318F6D2B23B0F0B400652139 /* TAConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAConstants.swift; sourceTree = "<group>"; };
+		318F6D2E23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TACountryCustomCellViewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				318F6CF423B0E04B00652139 /* AppDelegate.swift */,
+				318F6D2D23B0F15200652139 /* Views */,
 				318F6D2623B0EF8200652139 /* Constants */,
 				318F6D2523B0EF6C00652139 /* Model */,
 				318F6D2423B0EF5400652139 /* ViewController */,
@@ -150,6 +153,14 @@
 				318F6D2B23B0F0B400652139 /* TAConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		318F6D2D23B0F15200652139 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				318F6D2E23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +295,7 @@
 			files = (
 				318F6CF523B0E04B00652139 /* AppDelegate.swift in Sources */,
 				318F6D2A23B0F03500652139 /* TAModelCountry.swift in Sources */,
+				318F6D2F23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift in Sources */,
 				318F6D2C23B0F0B400652139 /* TAConstants.swift in Sources */,
 				318F6D2823B0F00700652139 /* TACountryDetailsVC.swift in Sources */,
 			);
