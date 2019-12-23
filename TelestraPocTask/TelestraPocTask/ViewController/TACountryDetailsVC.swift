@@ -12,13 +12,23 @@ class TACountryDetailsVC: UIViewController {
     
     lazy var countryTableView = UITableView()
     var products: [Product]!
-    
+    lazy var refreshControl = UIRefreshControl()
+    lazy var errorMsgLabel : UILabel = {
+        let label = UILabel()
+        label.textColor = .gray
+        label.font = UIFont.systemFont(ofSize: 21)
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.sizeToFit()
+        return label
+    }()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigation()
         createTableView()
+        createRrefreshControl()
         createProductArray()
     }
     
@@ -55,6 +65,10 @@ extension TACountryDetailsVC: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count:Int = products?.count ?? 0
+        if(count == 0)
+        {
+            createErrorLabel()
+        }
         return count
     }
     
@@ -67,4 +81,21 @@ extension TACountryDetailsVC: UITableViewDataSource{
         return cell
     }
 
+}
+
+extension TACountryDetailsVC{
+    private func createErrorLabel() {
+        countryTableView.backgroundView = errorMsgLabel
+        errorMsgLabel.text = TAConstants.ConfigMessageValue.initialEmptyMsg
+    }
+    
+    private func createRrefreshControl() {
+        refreshControl.attributedTitle = NSAttributedString(string: TAConstants.ConfigMessageValue.pullToRefreshMsg)
+        refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: UIControl.Event.valueChanged)
+        countryTableView.addSubview(refreshControl)
+    }
+    
+    @objc func refresh(sender:AnyObject) {
+        refreshControl.endRefreshing()
+    }
 }
