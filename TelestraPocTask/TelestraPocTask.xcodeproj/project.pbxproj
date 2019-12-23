@@ -17,6 +17,8 @@
 		318F6D2C23B0F0B400652139 /* TAConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2B23B0F0B400652139 /* TAConstants.swift */; };
 		318F6D2F23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2E23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift */; };
 		318F6D3123B0F7E400652139 /* TAViewIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3023B0F7E400652139 /* TAViewIdentifier.swift */; };
+		318F6D3323B118C500652139 /* TAModelTitleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3223B118C500652139 /* TAModelTitleHeader.swift */; };
+		318F6D3523B118F400652139 /* TAModelTitleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3423B118F400652139 /* TAModelTitleRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		318F6D2B23B0F0B400652139 /* TAConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAConstants.swift; sourceTree = "<group>"; };
 		318F6D2E23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TACountryCustomCellViewTableViewCell.swift; sourceTree = "<group>"; };
 		318F6D3023B0F7E400652139 /* TAViewIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAViewIdentifier.swift; sourceTree = "<group>"; };
+		318F6D3223B118C500652139 /* TAModelTitleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAModelTitleHeader.swift; sourceTree = "<group>"; };
+		318F6D3423B118F400652139 /* TAModelTitleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAModelTitleRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				318F6D2923B0F03500652139 /* TAModelCountry.swift */,
+				318F6D3223B118C500652139 /* TAModelTitleHeader.swift */,
+				318F6D3423B118F400652139 /* TAModelTitleRow.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -296,8 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				318F6D3523B118F400652139 /* TAModelTitleRow.swift in Sources */,
 				318F6CF523B0E04B00652139 /* AppDelegate.swift in Sources */,
 				318F6D2A23B0F03500652139 /* TAModelCountry.swift in Sources */,
+				318F6D3323B118C500652139 /* TAModelTitleHeader.swift in Sources */,
 				318F6D2F23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift in Sources */,
 				318F6D2C23B0F0B400652139 /* TAConstants.swift in Sources */,
 				318F6D3123B0F7E400652139 /* TAViewIdentifier.swift in Sources */,
