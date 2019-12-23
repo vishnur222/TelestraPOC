@@ -53,9 +53,9 @@ class TACountryDetailsVC: UIViewController {
     
     func createProductArray() {
      products = [Product]()
-        products.append(Product(productName: "Glasses", productImage: "imagename" , productDesc: "This is best Glasses "))
-        products.append(Product(productName: "Desert", productImage: "Image name" , productDesc: "This is so yummy"))
-        products.append(Product(productName: "Camera Lens", productImage: "iamgwe name", productDesc: "I wish I had this camera lens"))
+        products.append(Product(productName: "Glasses", productImage: "imagename" , productDesc: "Testing1 is best Glasses This is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best Glasses "))
+        products.append(Product(productName: "Desert", productImage: "Image name" , productDesc: "Testing2 is so yummy "))
+        products.append(Product(productName: "Camera Lens", productImage: "iamgwe name", productDesc: "Testing3 I wish I had this camera lens This is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best Glasses"))
     }
 
 
@@ -73,11 +73,11 @@ extension TACountryDetailsVC: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TACountryCustomCellViewTableViewCell.identifierVal) as? TACountryCustomCellViewTableViewCell else
-               {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TACountryCustomCellViewTableViewCell.identifierVal) as? TACountryCustomCellViewTableViewCell else{
                    fatalError(" Please check TableViewCell identifier")
                }
-               cell.textLabel?.text = "text"
+        let currentLastItem = products[indexPath.row]
+        cell.product = currentLastItem
         return cell
     }
 
