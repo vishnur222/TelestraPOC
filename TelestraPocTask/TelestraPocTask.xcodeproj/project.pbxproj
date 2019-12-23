@@ -12,6 +12,9 @@
 		318F6D0123B0E04C00652139 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318F6CFF23B0E04C00652139 /* LaunchScreen.storyboard */; };
 		318F6D0C23B0E04C00652139 /* TelestraPocTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D0B23B0E04C00652139 /* TelestraPocTaskTests.swift */; };
 		318F6D1723B0E04C00652139 /* TelestraPocTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D1623B0E04C00652139 /* TelestraPocTaskUITests.swift */; };
+		318F6D2823B0F00700652139 /* TACountryDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2723B0F00700652139 /* TACountryDetailsVC.swift */; };
+		318F6D2A23B0F03500652139 /* TAModelCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2923B0F03500652139 /* TAModelCountry.swift */; };
+		318F6D2C23B0F0B400652139 /* TAConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2B23B0F0B400652139 /* TAConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		318F6D1223B0E04C00652139 /* TelestraPocTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelestraPocTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		318F6D1623B0E04C00652139 /* TelestraPocTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelestraPocTaskUITests.swift; sourceTree = "<group>"; };
 		318F6D1823B0E04C00652139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		318F6D2723B0F00700652139 /* TACountryDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TACountryDetailsVC.swift; sourceTree = "<group>"; };
+		318F6D2923B0F03500652139 /* TAModelCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAModelCountry.swift; sourceTree = "<group>"; };
+		318F6D2B23B0F0B400652139 /* TAConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				318F6CF423B0E04B00652139 /* AppDelegate.swift */,
+				318F6D2623B0EF8200652139 /* Constants */,
+				318F6D2523B0EF6C00652139 /* Model */,
+				318F6D2423B0EF5400652139 /* ViewController */,
 				318F6CFD23B0E04C00652139 /* Assets.xcassets */,
 				318F6CFF23B0E04C00652139 /* LaunchScreen.storyboard */,
 				318F6D0223B0E04C00652139 /* Info.plist */,
@@ -117,6 +126,30 @@
 				318F6D1823B0E04C00652139 /* Info.plist */,
 			);
 			path = TelestraPocTaskUITests;
+			sourceTree = "<group>";
+		};
+		318F6D2423B0EF5400652139 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				318F6D2723B0F00700652139 /* TACountryDetailsVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		318F6D2523B0EF6C00652139 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				318F6D2923B0F03500652139 /* TAModelCountry.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		318F6D2623B0EF8200652139 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				318F6D2B23B0F0B400652139 /* TAConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +283,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				318F6CF523B0E04B00652139 /* AppDelegate.swift in Sources */,
+				318F6D2A23B0F03500652139 /* TAModelCountry.swift in Sources */,
+				318F6D2C23B0F0B400652139 /* TAConstants.swift in Sources */,
+				318F6D2823B0F00700652139 /* TACountryDetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
