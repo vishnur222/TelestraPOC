@@ -12,6 +12,8 @@ class TACountryDetailsVC: UIViewController {
     
     lazy var countryTableView = UITableView()
     var products: [Product]!
+    var titleHeader: TAModelTitleHeader!
+    var titleRow: [TAModelTitleRow]!
     lazy var refreshControl = UIRefreshControl()
     lazy var errorMsgLabel : UILabel = {
         let label = UILabel()
@@ -26,6 +28,14 @@ class TACountryDetailsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        WebServiceManager.shared.getCountryData(completion: {
+            (data) in
+            self.titleRow = data.rows
+            DispatchQueue.main.async {
+                self.title = data.title
+                self.countryTableView.reloadData()
+            }
+        })
         setUpNavigation()
         createTableView()
         createRrefreshControl()
@@ -33,7 +43,7 @@ class TACountryDetailsVC: UIViewController {
     }
     
     func setUpNavigation() {
-     navigationItem.title = "Contacts"
+     //navigationItem.title = "Contacts"
         self.navigationController?.navigationBar.barTintColor = .red
      self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
@@ -56,6 +66,12 @@ class TACountryDetailsVC: UIViewController {
         products.append(Product(productName: "Glasses", productImage: "imagename" , productDesc: "Testing1 is best Glasses This is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best Glasses "))
         products.append(Product(productName: "Desert", productImage: "Image name" , productDesc: "Testing2 is so yummy "))
         products.append(Product(productName: "Camera Lens", productImage: "iamgwe name", productDesc: "Testing3 I wish I had this camera lens This is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best Glasses"))
+        products.append(Product(productName: "Glasses", productImage: "imagename" , productDesc: "Testing1 is best Glasses This is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best Glasses "))
+        products.append(Product(productName: "Desert", productImage: "Image name" , productDesc: "Testing2 is so yummy "))
+        products.append(Product(productName: "Camera Lens", productImage: "iamgwe name", productDesc: "Testing3 I wish I had this camera lens This is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best Glasses"))
+        products.append(Product(productName: "Glasses", productImage: "imagename" , productDesc: "Testing1 is best Glasses This is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best Glasses "))
+        products.append(Product(productName: "Desert", productImage: "Image name" , productDesc: "Testing2 is so yummy "))
+        products.append(Product(productName: "Camera Lens", productImage: "iamgwe name", productDesc: "Testing3 I wish I had this camera lens This is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best Glasses"))
     }
 
 
@@ -64,7 +80,7 @@ class TACountryDetailsVC: UIViewController {
 extension TACountryDetailsVC: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let count:Int = products?.count ?? 0
+        let count:Int = titleRow?.count ?? 0
         if(count == 0)
         {
             createErrorLabel()
@@ -76,7 +92,7 @@ extension TACountryDetailsVC: UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TACountryCustomCellViewTableViewCell.identifierVal) as? TACountryCustomCellViewTableViewCell else{
                    fatalError(" Please check TableViewCell identifier")
                }
-        let currentLastItem = products[indexPath.row]
+        let currentLastItem = titleRow[indexPath.row]
         cell.product = currentLastItem
         return cell
     }
@@ -96,6 +112,15 @@ extension TACountryDetailsVC{
     }
     
     @objc func refresh(sender:AnyObject) {
-        refreshControl.endRefreshing()
+        WebServiceManager.shared.getCountryData(completion: {
+                  (data) in
+                  self.titleRow = data.rows
+                  DispatchQueue.main.async {
+                    self.title = data.title
+                    self.countryTableView.reloadData()
+                    self.refreshControl.endRefreshing()
+
+                  }
+              })
     }
 }
