@@ -11,7 +11,6 @@ import UIKit
 class TACountryDetailsVC: UIViewController {
     
     lazy var countryTableView = UITableView()
-    var products: [Product]!
     var titleHeader: TAModelTitleHeader!
     var titleRow: [TAModelTitleRow]!
     lazy var refreshControl = UIRefreshControl()
@@ -39,7 +38,6 @@ class TACountryDetailsVC: UIViewController {
         setUpNavigation()
         createTableView()
         createRrefreshControl()
-        createProductArray()
     }
     
     func setUpNavigation() {
@@ -61,19 +59,6 @@ class TACountryDetailsVC: UIViewController {
             countryTableView.bottomAnchor.constraint(equalTo:view.bottomAnchor).isActive = true
     }
     
-    func createProductArray() {
-     products = [Product]()
-        products.append(Product(productName: "Glasses", productImage: "imagename" , productDesc: "Testing1 is best Glasses This is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best Glasses "))
-        products.append(Product(productName: "Desert", productImage: "Image name" , productDesc: "Testing2 is so yummy "))
-        products.append(Product(productName: "Camera Lens", productImage: "iamgwe name", productDesc: "Testing3 I wish I had this camera lens This is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best Glasses"))
-        products.append(Product(productName: "Glasses", productImage: "imagename" , productDesc: "Testing1 is best Glasses This is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best Glasses "))
-        products.append(Product(productName: "Desert", productImage: "Image name" , productDesc: "Testing2 is so yummy "))
-        products.append(Product(productName: "Camera Lens", productImage: "iamgwe name", productDesc: "Testing3 I wish I had this camera lens This is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best Glasses"))
-        products.append(Product(productName: "Glasses", productImage: "imagename" , productDesc: "Testing1 is best Glasses This is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best Glasses "))
-        products.append(Product(productName: "Desert", productImage: "Image name" , productDesc: "Testing2 is so yummy "))
-        products.append(Product(productName: "Camera Lens", productImage: "iamgwe name", productDesc: "Testing3 I wish I had this camera lens This is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best GlassesThis is best Glasses"))
-    }
-
 
 }
 
