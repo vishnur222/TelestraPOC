@@ -16,6 +16,7 @@
 		318F6D2A23B0F03500652139 /* TAModelCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2923B0F03500652139 /* TAModelCountry.swift */; };
 		318F6D2C23B0F0B400652139 /* TAConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2B23B0F0B400652139 /* TAConstants.swift */; };
 		318F6D2F23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2E23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift */; };
+		318F6D3123B0F7E400652139 /* TAViewIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3023B0F7E400652139 /* TAViewIdentifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		318F6D2923B0F03500652139 /* TAModelCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAModelCountry.swift; sourceTree = "<group>"; };
 		318F6D2B23B0F0B400652139 /* TAConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAConstants.swift; sourceTree = "<group>"; };
 		318F6D2E23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TACountryCustomCellViewTableViewCell.swift; sourceTree = "<group>"; };
+		318F6D3023B0F7E400652139 /* TAViewIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAViewIdentifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				318F6D2E23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift */,
+				318F6D3023B0F7E400652139 /* TAViewIdentifier.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				318F6D2A23B0F03500652139 /* TAModelCountry.swift in Sources */,
 				318F6D2F23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift in Sources */,
 				318F6D2C23B0F0B400652139 /* TAConstants.swift in Sources */,
+				318F6D3123B0F7E400652139 /* TAViewIdentifier.swift in Sources */,
 				318F6D2823B0F00700652139 /* TACountryDetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

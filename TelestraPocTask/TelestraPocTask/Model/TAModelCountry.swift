@@ -7,3 +7,9 @@
 //
 
 import Foundation
+struct Product {
+
+    var productName : String
+    var productImage : String
+    var productDesc : String
+}
