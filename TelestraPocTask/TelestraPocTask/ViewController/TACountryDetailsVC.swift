@@ -12,7 +12,7 @@ class TACountryDetailsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+print("TAVC loaded")
         // Do any additional setup after loading the view.
     }
     
