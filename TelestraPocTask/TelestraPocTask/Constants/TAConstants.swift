@@ -6,8 +6,13 @@
 //  Copyright © 2019 v.r.ramachandran. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class TAConstants: NSObject {
-
+    
+    struct ConfigMessageValue {
+        static let initialEmptyMsg = "No Data available to display"
+        static let pullToRefreshMsg = "Pull to refresh"
+    }
 }
+
