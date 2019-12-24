@@ -14,7 +14,7 @@ class CountryDetailsVC: UIViewController {
   var titleHeader: ModelTitleHeader!
   var titleRow: [ModelTitleRow]!
   var webServiceManager: WebServiceManager!
-  lazy var refreshControl = UIRefreshControl()
+  var refreshControl:  UIRefreshControl!
   lazy var errorMsgLabel : UILabel = {
     let label = UILabel()
     label.textColor = .gray
@@ -28,8 +28,8 @@ class CountryDetailsVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpNavigation()
-    createTableView()
     createRrefreshControl()
+    createTableView()
   }
   
   override func viewWillAppear(_ animated: Bool)
@@ -50,9 +50,11 @@ class CountryDetailsVC: UIViewController {
   func createTableView(){
     view.addSubview(countryTableView)
     countryTableView.tableFooterView = UIView(frame: .zero)
+    countryTableView.refreshControl = refreshControl
     countryTableView.register(UITableViewCell.self, forCellReuseIdentifier: CountryCustomCellViewTableViewCell.identifierVal)
     countryTableView.register(CountryCustomCellViewTableViewCell.self, forCellReuseIdentifier: CountryCustomCellViewTableViewCell.identifierVal)
     countryTableView.dataSource = self
+    
     countryTableView.translatesAutoresizingMaskIntoConstraints = false
     countryTableView.topAnchor.constraint(equalTo:view.topAnchor).isActive = true
     countryTableView.leftAnchor.constraint(equalTo:view.leftAnchor).isActive = true
@@ -93,9 +95,9 @@ extension CountryDetailsVC{
   
   // Pull to refresh fucntionality
   private func createRrefreshControl() {
+    refreshControl = UIRefreshControl()
     refreshControl.attributedTitle = NSAttributedString(string: Constants.ConfigMessageValue.pullToRefreshMsg)
     refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: UIControl.Event.valueChanged)
-    countryTableView.addSubview(refreshControl)
   }
   
   @objc func refresh(sender:AnyObject) {
@@ -107,10 +109,14 @@ extension CountryDetailsVC: WebServiceManagerDelegate{
   // MARK: response Sucess/failure call back methods
   func onSucess(_ tag: NSInteger, with data: ModelTitleHeader){
     self.titleRow = data.rows
-    DispatchQueue.main.async {
+
+    DispatchQueue.main.async { [weak self] in
+      guard let self = self else { return }
       self.title = data.title
       self.countryTableView.reloadData()
-      self.refreshControl.endRefreshing()
+      if let refreshControl = self.refreshControl  {
+        refreshControl.endRefreshing()
+      }
     }
   }
   
@@ -118,6 +124,9 @@ extension CountryDetailsVC: WebServiceManagerDelegate{
     showAlert(title: Constants.ConfigMessageValue.alertTitle, message: reason)
   }
   func showAlert(title: String, message: String){
+    DispatchQueue.main.async {
+    self.refreshControl.endRefreshing()
+    }
     let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
     alert.addAction(UIAlertAction(title: Constants.ConfigMessageValue.alertOkBtn, style: UIAlertAction.Style.default, handler: nil))
     self.present(alert, animated: true, completion: nil)
