@@ -22,7 +22,7 @@ protocol TAWebServiceManagerDelegate: class {
     // MARK: getCountryData web service call
     func getCountryData() {
         let apiTagVal = ApiTag.getCountryDetails.rawValue
-     guard let apiUrl = URL(string: "https://api.myjson.com/bins/iij5n") else { return }
+        guard let apiUrl = URL(string: "https://api.myjson.com/bins/196ifk") else { return }
      
      if !TAReachability.isConnectedToNetwork() {
         self.delegate?.onFailure(apiTagVal, with: TAConstants.ConfigMessageValue.noInternetMsg)
