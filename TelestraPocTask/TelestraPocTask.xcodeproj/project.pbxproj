@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,15 +12,14 @@
 		318F6D0123B0E04C00652139 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318F6CFF23B0E04C00652139 /* LaunchScreen.storyboard */; };
 		318F6D0C23B0E04C00652139 /* TelestraPocTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D0B23B0E04C00652139 /* TelestraPocTaskTests.swift */; };
 		318F6D1723B0E04C00652139 /* TelestraPocTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D1623B0E04C00652139 /* TelestraPocTaskUITests.swift */; };
-		318F6D2823B0F00700652139 /* TACountryDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2723B0F00700652139 /* TACountryDetailsVC.swift */; };
-		318F6D2A23B0F03500652139 /* TAModelCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2923B0F03500652139 /* TAModelCountry.swift */; };
-		318F6D2C23B0F0B400652139 /* TAConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2B23B0F0B400652139 /* TAConstants.swift */; };
-		318F6D2F23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2E23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift */; };
-		318F6D3123B0F7E400652139 /* TAViewIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3023B0F7E400652139 /* TAViewIdentifier.swift */; };
-		318F6D3323B118C500652139 /* TAModelTitleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3223B118C500652139 /* TAModelTitleHeader.swift */; };
-		318F6D3523B118F400652139 /* TAModelTitleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3423B118F400652139 /* TAModelTitleRow.swift */; };
-		318F6D3823B11D7100652139 /* TAWebserviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3723B11D7100652139 /* TAWebserviceManager.swift */; };
-		318F6D3B23B11E7300652139 /* TAReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3A23B11E7300652139 /* TAReachability.swift */; };
+		318F6D2823B0F00700652139 /* CountryDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2723B0F00700652139 /* CountryDetailsVC.swift */; };
+		318F6D2C23B0F0B400652139 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2B23B0F0B400652139 /* Constants.swift */; };
+		318F6D2F23B0F1C100652139 /* CountryCustomCellViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2E23B0F1C100652139 /* CountryCustomCellViewTableViewCell.swift */; };
+		318F6D3123B0F7E400652139 /* ViewIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3023B0F7E400652139 /* ViewIdentifier.swift */; };
+		318F6D3323B118C500652139 /* ModelTitleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3223B118C500652139 /* ModelTitleHeader.swift */; };
+		318F6D3523B118F400652139 /* ModelTitleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3423B118F400652139 /* ModelTitleRow.swift */; };
+		318F6D3823B11D7100652139 /* WebserviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3723B11D7100652139 /* WebserviceManager.swift */; };
+		318F6D3B23B11E7300652139 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3A23B11E7300652139 /* Reachability.swift */; };
 		60477ED001D4D93784063B36 /* Pods_TelestraPocTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E88C52960BBB94A26EAEDE2A /* Pods_TelestraPocTaskTests.framework */; };
 		A6E84284A43BD05DEE6D0A5A /* Pods_TelestraPocTask_TelestraPocTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93B78F8A801FDFEF1D0F412 /* Pods_TelestraPocTask_TelestraPocTaskUITests.framework */; };
 		DD6F75244DFD32EB62B00C40 /* Pods_TelestraPocTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D1AE06D498692DA52FAF7B /* Pods_TelestraPocTask.framework */; };
@@ -58,15 +57,14 @@
 		318F6D1223B0E04C00652139 /* TelestraPocTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelestraPocTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		318F6D1623B0E04C00652139 /* TelestraPocTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelestraPocTaskUITests.swift; sourceTree = "<group>"; };
 		318F6D1823B0E04C00652139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		318F6D2723B0F00700652139 /* TACountryDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TACountryDetailsVC.swift; sourceTree = "<group>"; };
-		318F6D2923B0F03500652139 /* TAModelCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAModelCountry.swift; sourceTree = "<group>"; };
-		318F6D2B23B0F0B400652139 /* TAConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAConstants.swift; sourceTree = "<group>"; };
-		318F6D2E23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TACountryCustomCellViewTableViewCell.swift; sourceTree = "<group>"; };
-		318F6D3023B0F7E400652139 /* TAViewIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAViewIdentifier.swift; sourceTree = "<group>"; };
-		318F6D3223B118C500652139 /* TAModelTitleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAModelTitleHeader.swift; sourceTree = "<group>"; };
-		318F6D3423B118F400652139 /* TAModelTitleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAModelTitleRow.swift; sourceTree = "<group>"; };
-		318F6D3723B11D7100652139 /* TAWebserviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAWebserviceManager.swift; sourceTree = "<group>"; };
-		318F6D3A23B11E7300652139 /* TAReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAReachability.swift; sourceTree = "<group>"; };
+		318F6D2723B0F00700652139 /* CountryDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsVC.swift; sourceTree = "<group>"; };
+		318F6D2B23B0F0B400652139 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		318F6D2E23B0F1C100652139 /* CountryCustomCellViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCustomCellViewTableViewCell.swift; sourceTree = "<group>"; };
+		318F6D3023B0F7E400652139 /* ViewIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentifier.swift; sourceTree = "<group>"; };
+		318F6D3223B118C500652139 /* ModelTitleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTitleHeader.swift; sourceTree = "<group>"; };
+		318F6D3423B118F400652139 /* ModelTitleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTitleRow.swift; sourceTree = "<group>"; };
+		318F6D3723B11D7100652139 /* WebserviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebserviceManager.swift; sourceTree = "<group>"; };
+		318F6D3A23B11E7300652139 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		472E214EBE54C666ED75BF46 /* Pods-TelestraPocTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelestraPocTaskTests.release.xcconfig"; path = "Target Support Files/Pods-TelestraPocTaskTests/Pods-TelestraPocTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		75C23E5F4891DBDB59D9853E /* Pods-TelestraPocTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelestraPocTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-TelestraPocTaskTests/Pods-TelestraPocTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AAEC97ACFBBE83A76ADC766B /* Pods-TelestraPocTask-TelestraPocTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelestraPocTask-TelestraPocTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-TelestraPocTask-TelestraPocTaskUITests/Pods-TelestraPocTask-TelestraPocTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,7 +161,7 @@
 		318F6D2423B0EF5400652139 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				318F6D2723B0F00700652139 /* TACountryDetailsVC.swift */,
+				318F6D2723B0F00700652139 /* CountryDetailsVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -171,9 +169,8 @@
 		318F6D2523B0EF6C00652139 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				318F6D2923B0F03500652139 /* TAModelCountry.swift */,
-				318F6D3223B118C500652139 /* TAModelTitleHeader.swift */,
-				318F6D3423B118F400652139 /* TAModelTitleRow.swift */,
+				318F6D3223B118C500652139 /* ModelTitleHeader.swift */,
+				318F6D3423B118F400652139 /* ModelTitleRow.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,7 +178,7 @@
 		318F6D2623B0EF8200652139 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				318F6D2B23B0F0B400652139 /* TAConstants.swift */,
+				318F6D2B23B0F0B400652139 /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -189,8 +186,8 @@
 		318F6D2D23B0F15200652139 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				318F6D2E23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift */,
-				318F6D3023B0F7E400652139 /* TAViewIdentifier.swift */,
+				318F6D2E23B0F1C100652139 /* CountryCustomCellViewTableViewCell.swift */,
+				318F6D3023B0F7E400652139 /* ViewIdentifier.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,7 +195,7 @@
 		318F6D3623B11D3F00652139 /* WebServiceManager */ = {
 			isa = PBXGroup;
 			children = (
-				318F6D3723B11D7100652139 /* TAWebserviceManager.swift */,
+				318F6D3723B11D7100652139 /* WebserviceManager.swift */,
 			);
 			path = WebServiceManager;
 			sourceTree = "<group>";
@@ -206,7 +203,7 @@
 		318F6D3923B11E0E00652139 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				318F6D3A23B11E7300652139 /* TAReachability.swift */,
+				318F6D3A23B11E7300652139 /* Reachability.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -221,7 +218,6 @@
 				75C23E5F4891DBDB59D9853E /* Pods-TelestraPocTaskTests.debug.xcconfig */,
 				472E214EBE54C666ED75BF46 /* Pods-TelestraPocTaskTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -473,16 +469,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				318F6D3523B118F400652139 /* TAModelTitleRow.swift in Sources */,
+				318F6D3523B118F400652139 /* ModelTitleRow.swift in Sources */,
 				318F6CF523B0E04B00652139 /* AppDelegate.swift in Sources */,
-				318F6D2A23B0F03500652139 /* TAModelCountry.swift in Sources */,
-				318F6D3323B118C500652139 /* TAModelTitleHeader.swift in Sources */,
-				318F6D2F23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift in Sources */,
-				318F6D2C23B0F0B400652139 /* TAConstants.swift in Sources */,
-				318F6D3123B0F7E400652139 /* TAViewIdentifier.swift in Sources */,
-				318F6D3B23B11E7300652139 /* TAReachability.swift in Sources */,
-				318F6D3823B11D7100652139 /* TAWebserviceManager.swift in Sources */,
-				318F6D2823B0F00700652139 /* TACountryDetailsVC.swift in Sources */,
+				318F6D3323B118C500652139 /* ModelTitleHeader.swift in Sources */,
+				318F6D2F23B0F1C100652139 /* CountryCustomCellViewTableViewCell.swift in Sources */,
+				318F6D2C23B0F0B400652139 /* Constants.swift in Sources */,
+				318F6D3123B0F7E400652139 /* ViewIdentifier.swift in Sources */,
+				318F6D3B23B11E7300652139 /* Reachability.swift in Sources */,
+				318F6D3823B11D7100652139 /* WebserviceManager.swift in Sources */,
+				318F6D2823B0F00700652139 /* CountryDetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
