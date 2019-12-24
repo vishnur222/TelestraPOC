@@ -44,6 +44,7 @@ func setUpNavigation() {
 }
 
 // MARK: Tableview creation
+// Table view creation and providing autolayout constriants
 func createTableView(){
     view.addSubview(countryTableView)
     countryTableView.register(UITableViewCell.self, forCellReuseIdentifier: CountryCustomCellViewTableViewCell.identifierVal)
@@ -87,6 +88,7 @@ private func createErrorLabel() {
     errorMsgLabel.text = Constants.ConfigMessageValue.initialEmptyMsg
 }
 
+// Pull to refresh fucntionality
 private func createRrefreshControl() {
     refreshControl.attributedTitle = NSAttributedString(string: Constants.ConfigMessageValue.pullToRefreshMsg)
     refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: UIControl.Event.valueChanged)

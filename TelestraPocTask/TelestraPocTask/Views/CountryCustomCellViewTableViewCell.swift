@@ -33,9 +33,11 @@ class CountryCustomCellViewTableViewCell: UITableViewCell {
         return lbl
     }()
     
+    // Image downloading method
     func setImage(imageUrl: String?, placeHolder: String) {
         productImage.sd_setImage(with: URL(string: imageUrl ?? ""), placeholderImage: UIImage(named: placeHolder))
     }
+    
     private let productDescriptionLabel : UILabel = {
         let lbl = UILabel()
         lbl.textColor = .black
