@@ -19,6 +19,7 @@ class TACountryCustomCellViewTableViewCell: UITableViewCell {
         }
     }
     
+    // MARK: Table cell Labels & UIImage creation
     private let productNameLabel : UILabel = {
         let lbl = UILabel()
         lbl.textColor = .black
@@ -50,7 +51,6 @@ class TACountryCustomCellViewTableViewCell: UITableViewCell {
     }()
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -19,6 +19,8 @@
 		318F6D3123B0F7E400652139 /* TAViewIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3023B0F7E400652139 /* TAViewIdentifier.swift */; };
 		318F6D3323B118C500652139 /* TAModelTitleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3223B118C500652139 /* TAModelTitleHeader.swift */; };
 		318F6D3523B118F400652139 /* TAModelTitleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3423B118F400652139 /* TAModelTitleRow.swift */; };
+		318F6D3823B11D7100652139 /* TAWebserviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3723B11D7100652139 /* TAWebserviceManager.swift */; };
+		318F6D3B23B11E7300652139 /* TAReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3A23B11E7300652139 /* TAReachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		318F6D3023B0F7E400652139 /* TAViewIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAViewIdentifier.swift; sourceTree = "<group>"; };
 		318F6D3223B118C500652139 /* TAModelTitleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAModelTitleHeader.swift; sourceTree = "<group>"; };
 		318F6D3423B118F400652139 /* TAModelTitleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAModelTitleRow.swift; sourceTree = "<group>"; };
+		318F6D3723B11D7100652139 /* TAWebserviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAWebserviceManager.swift; sourceTree = "<group>"; };
+		318F6D3A23B11E7300652139 /* TAReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAReachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				318F6CF423B0E04B00652139 /* AppDelegate.swift */,
+				318F6D3923B11E0E00652139 /* Network */,
+				318F6D3623B11D3F00652139 /* WebServiceManager */,
 				318F6D2D23B0F15200652139 /* Views */,
 				318F6D2623B0EF8200652139 /* Constants */,
 				318F6D2523B0EF6C00652139 /* Model */,
@@ -170,6 +176,22 @@
 				318F6D3023B0F7E400652139 /* TAViewIdentifier.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		318F6D3623B11D3F00652139 /* WebServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+				318F6D3723B11D7100652139 /* TAWebserviceManager.swift */,
+			);
+			path = WebServiceManager;
+			sourceTree = "<group>";
+		};
+		318F6D3923B11E0E00652139 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				318F6D3A23B11E7300652139 /* TAReachability.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +331,8 @@
 				318F6D2F23B0F1C100652139 /* TACountryCustomCellViewTableViewCell.swift in Sources */,
 				318F6D2C23B0F0B400652139 /* TAConstants.swift in Sources */,
 				318F6D3123B0F7E400652139 /* TAViewIdentifier.swift in Sources */,
+				318F6D3B23B11E7300652139 /* TAReachability.swift in Sources */,
+				318F6D3823B11D7100652139 /* TAWebserviceManager.swift in Sources */,
 				318F6D2823B0F00700652139 /* TACountryDetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
