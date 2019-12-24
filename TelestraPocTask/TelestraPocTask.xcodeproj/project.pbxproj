@@ -3,18 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		318F6CF523B0E04B00652139 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6CF423B0E04B00652139 /* AppDelegate.swift */; };
-		318F6CF723B0E04B00652139 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6CF623B0E04B00652139 /* SceneDelegate.swift */; };
-		318F6CF923B0E04B00652139 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6CF823B0E04B00652139 /* ViewController.swift */; };
-		318F6CFC23B0E04B00652139 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318F6CFA23B0E04B00652139 /* Main.storyboard */; };
 		318F6CFE23B0E04C00652139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 318F6CFD23B0E04C00652139 /* Assets.xcassets */; };
 		318F6D0123B0E04C00652139 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318F6CFF23B0E04C00652139 /* LaunchScreen.storyboard */; };
 		318F6D0C23B0E04C00652139 /* TelestraPocTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D0B23B0E04C00652139 /* TelestraPocTaskTests.swift */; };
 		318F6D1723B0E04C00652139 /* TelestraPocTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D1623B0E04C00652139 /* TelestraPocTaskUITests.swift */; };
+		318F6D2823B0F00700652139 /* CountryDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2723B0F00700652139 /* CountryDetailsVC.swift */; };
+		318F6D2C23B0F0B400652139 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2B23B0F0B400652139 /* Constants.swift */; };
+		318F6D2F23B0F1C100652139 /* CountryCustomCellViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D2E23B0F1C100652139 /* CountryCustomCellViewTableViewCell.swift */; };
+		318F6D3123B0F7E400652139 /* ViewIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3023B0F7E400652139 /* ViewIdentifier.swift */; };
+		318F6D3323B118C500652139 /* ModelTitleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3223B118C500652139 /* ModelTitleHeader.swift */; };
+		318F6D3523B118F400652139 /* ModelTitleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3423B118F400652139 /* ModelTitleRow.swift */; };
+		318F6D3823B11D7100652139 /* WebserviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3723B11D7100652139 /* WebserviceManager.swift */; };
+		318F6D3B23B11E7300652139 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318F6D3A23B11E7300652139 /* Reachability.swift */; };
+		60477ED001D4D93784063B36 /* Pods_TelestraPocTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E88C52960BBB94A26EAEDE2A /* Pods_TelestraPocTaskTests.framework */; };
+		A6E84284A43BD05DEE6D0A5A /* Pods_TelestraPocTask_TelestraPocTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93B78F8A801FDFEF1D0F412 /* Pods_TelestraPocTask_TelestraPocTaskUITests.framework */; };
+		DD6F75244DFD32EB62B00C40 /* Pods_TelestraPocTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D1AE06D498692DA52FAF7B /* Pods_TelestraPocTask.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		214FB19A92EC0E867EF5EC7D /* Pods-TelestraPocTask-TelestraPocTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelestraPocTask-TelestraPocTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-TelestraPocTask-TelestraPocTaskUITests/Pods-TelestraPocTask-TelestraPocTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2207D33F15AF8963D6524745 /* Pods-TelestraPocTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelestraPocTask.debug.xcconfig"; path = "Target Support Files/Pods-TelestraPocTask/Pods-TelestraPocTask.debug.xcconfig"; sourceTree = "<group>"; };
+		28D1AE06D498692DA52FAF7B /* Pods_TelestraPocTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelestraPocTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		318F6CF123B0E04B00652139 /* TelestraPocTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelestraPocTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318F6CF423B0E04B00652139 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		318F6CF623B0E04B00652139 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		318F6CF823B0E04B00652139 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		318F6CFB23B0E04B00652139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		318F6CFD23B0E04C00652139 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		318F6D0023B0E04C00652139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		318F6D0223B0E04C00652139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +57,20 @@
 		318F6D1223B0E04C00652139 /* TelestraPocTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelestraPocTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		318F6D1623B0E04C00652139 /* TelestraPocTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelestraPocTaskUITests.swift; sourceTree = "<group>"; };
 		318F6D1823B0E04C00652139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		318F6D2723B0F00700652139 /* CountryDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsVC.swift; sourceTree = "<group>"; };
+		318F6D2B23B0F0B400652139 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		318F6D2E23B0F1C100652139 /* CountryCustomCellViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCustomCellViewTableViewCell.swift; sourceTree = "<group>"; };
+		318F6D3023B0F7E400652139 /* ViewIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentifier.swift; sourceTree = "<group>"; };
+		318F6D3223B118C500652139 /* ModelTitleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTitleHeader.swift; sourceTree = "<group>"; };
+		318F6D3423B118F400652139 /* ModelTitleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTitleRow.swift; sourceTree = "<group>"; };
+		318F6D3723B11D7100652139 /* WebserviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebserviceManager.swift; sourceTree = "<group>"; };
+		318F6D3A23B11E7300652139 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		472E214EBE54C666ED75BF46 /* Pods-TelestraPocTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelestraPocTaskTests.release.xcconfig"; path = "Target Support Files/Pods-TelestraPocTaskTests/Pods-TelestraPocTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		75C23E5F4891DBDB59D9853E /* Pods-TelestraPocTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelestraPocTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-TelestraPocTaskTests/Pods-TelestraPocTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AAEC97ACFBBE83A76ADC766B /* Pods-TelestraPocTask-TelestraPocTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelestraPocTask-TelestraPocTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-TelestraPocTask-TelestraPocTaskUITests/Pods-TelestraPocTask-TelestraPocTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B93B78F8A801FDFEF1D0F412 /* Pods_TelestraPocTask_TelestraPocTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelestraPocTask_TelestraPocTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E88C52960BBB94A26EAEDE2A /* Pods_TelestraPocTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelestraPocTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F86FAB998F2A153B377F7558 /* Pods-TelestraPocTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelestraPocTask.release.xcconfig"; path = "Target Support Files/Pods-TelestraPocTask/Pods-TelestraPocTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6F75244DFD32EB62B00C40 /* Pods_TelestraPocTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60477ED001D4D93784063B36 /* Pods_TelestraPocTaskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6E84284A43BD05DEE6D0A5A /* Pods_TelestraPocTask_TelestraPocTaskUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +108,8 @@
 				318F6D0A23B0E04C00652139 /* TelestraPocTaskTests */,
 				318F6D1523B0E04C00652139 /* TelestraPocTaskUITests */,
 				318F6CF223B0E04B00652139 /* Products */,
+				B1F7347BB75C3036839B0732 /* Pods */,
+				B97E1CDF0CD4A0065792F857 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,9 +127,12 @@
 			isa = PBXGroup;
 			children = (
 				318F6CF423B0E04B00652139 /* AppDelegate.swift */,
-				318F6CF623B0E04B00652139 /* SceneDelegate.swift */,
-				318F6CF823B0E04B00652139 /* ViewController.swift */,
-				318F6CFA23B0E04B00652139 /* Main.storyboard */,
+				318F6D3923B11E0E00652139 /* Network */,
+				318F6D3623B11D3F00652139 /* WebServiceManager */,
+				318F6D2D23B0F15200652139 /* Views */,
+				318F6D2623B0EF8200652139 /* Constants */,
+				318F6D2523B0EF6C00652139 /* Model */,
+				318F6D2423B0EF5400652139 /* ViewController */,
 				318F6CFD23B0E04C00652139 /* Assets.xcassets */,
 				318F6CFF23B0E04C00652139 /* LaunchScreen.storyboard */,
 				318F6D0223B0E04C00652139 /* Info.plist */,
@@ -128,6 +158,79 @@
 			path = TelestraPocTaskUITests;
 			sourceTree = "<group>";
 		};
+		318F6D2423B0EF5400652139 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				318F6D2723B0F00700652139 /* CountryDetailsVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		318F6D2523B0EF6C00652139 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				318F6D3223B118C500652139 /* ModelTitleHeader.swift */,
+				318F6D3423B118F400652139 /* ModelTitleRow.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		318F6D2623B0EF8200652139 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				318F6D2B23B0F0B400652139 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		318F6D2D23B0F15200652139 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				318F6D2E23B0F1C100652139 /* CountryCustomCellViewTableViewCell.swift */,
+				318F6D3023B0F7E400652139 /* ViewIdentifier.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		318F6D3623B11D3F00652139 /* WebServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+				318F6D3723B11D7100652139 /* WebserviceManager.swift */,
+			);
+			path = WebServiceManager;
+			sourceTree = "<group>";
+		};
+		318F6D3923B11E0E00652139 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				318F6D3A23B11E7300652139 /* Reachability.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B1F7347BB75C3036839B0732 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2207D33F15AF8963D6524745 /* Pods-TelestraPocTask.debug.xcconfig */,
+				F86FAB998F2A153B377F7558 /* Pods-TelestraPocTask.release.xcconfig */,
+				214FB19A92EC0E867EF5EC7D /* Pods-TelestraPocTask-TelestraPocTaskUITests.debug.xcconfig */,
+				AAEC97ACFBBE83A76ADC766B /* Pods-TelestraPocTask-TelestraPocTaskUITests.release.xcconfig */,
+				75C23E5F4891DBDB59D9853E /* Pods-TelestraPocTaskTests.debug.xcconfig */,
+				472E214EBE54C666ED75BF46 /* Pods-TelestraPocTaskTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B97E1CDF0CD4A0065792F857 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28D1AE06D498692DA52FAF7B /* Pods_TelestraPocTask.framework */,
+				B93B78F8A801FDFEF1D0F412 /* Pods_TelestraPocTask_TelestraPocTaskUITests.framework */,
+				E88C52960BBB94A26EAEDE2A /* Pods_TelestraPocTaskTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 318F6D1B23B0E04C00652139 /* Build configuration list for PBXNativeTarget "TelestraPocTask" */;
 			buildPhases = (
+				7F4825416A19D3C7A50C3BF7 /* [CP] Check Pods Manifest.lock */,
 				318F6CED23B0E04B00652139 /* Sources */,
 				318F6CEE23B0E04B00652139 /* Frameworks */,
 				318F6CEF23B0E04B00652139 /* Resources */,
+				FD1F7CAE1583C732BF2A55E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +257,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 318F6D1E23B0E04C00652139 /* Build configuration list for PBXNativeTarget "TelestraPocTaskTests" */;
 			buildPhases = (
+				F6A32D9869B26167DE76D2C2 /* [CP] Check Pods Manifest.lock */,
 				318F6D0323B0E04C00652139 /* Sources */,
 				318F6D0423B0E04C00652139 /* Frameworks */,
 				318F6D0523B0E04C00652139 /* Resources */,
@@ -170,9 +276,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 318F6D2123B0E04C00652139 /* Build configuration list for PBXNativeTarget "TelestraPocTaskUITests" */;
 			buildPhases = (
+				48FFCA0DBD34D699EBF038CF /* [CP] Check Pods Manifest.lock */,
 				318F6D0E23B0E04C00652139 /* Sources */,
 				318F6D0F23B0E04C00652139 /* Frameworks */,
 				318F6D1023B0E04C00652139 /* Resources */,
+				E6B909E4369E4252ADA0204D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,7 +342,6 @@
 			files = (
 				318F6D0123B0E04C00652139 /* LaunchScreen.storyboard in Resources */,
 				318F6CFE23B0E04C00652139 /* Assets.xcassets in Resources */,
-				318F6CFC23B0E04B00652139 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,14 +361,123 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		48FFCA0DBD34D699EBF038CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TelestraPocTask-TelestraPocTaskUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F4825416A19D3C7A50C3BF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TelestraPocTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6B909E4369E4252ADA0204D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TelestraPocTask-TelestraPocTaskUITests/Pods-TelestraPocTask-TelestraPocTaskUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TelestraPocTask-TelestraPocTaskUITests/Pods-TelestraPocTask-TelestraPocTaskUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TelestraPocTask-TelestraPocTaskUITests/Pods-TelestraPocTask-TelestraPocTaskUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6A32D9869B26167DE76D2C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TelestraPocTaskTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD1F7CAE1583C732BF2A55E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TelestraPocTask/Pods-TelestraPocTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TelestraPocTask/Pods-TelestraPocTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TelestraPocTask/Pods-TelestraPocTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		318F6CED23B0E04B00652139 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				318F6CF923B0E04B00652139 /* ViewController.swift in Sources */,
+				318F6D3523B118F400652139 /* ModelTitleRow.swift in Sources */,
 				318F6CF523B0E04B00652139 /* AppDelegate.swift in Sources */,
-				318F6CF723B0E04B00652139 /* SceneDelegate.swift in Sources */,
+				318F6D3323B118C500652139 /* ModelTitleHeader.swift in Sources */,
+				318F6D2F23B0F1C100652139 /* CountryCustomCellViewTableViewCell.swift in Sources */,
+				318F6D2C23B0F0B400652139 /* Constants.swift in Sources */,
+				318F6D3123B0F7E400652139 /* ViewIdentifier.swift in Sources */,
+				318F6D3B23B11E7300652139 /* Reachability.swift in Sources */,
+				318F6D3823B11D7100652139 /* WebserviceManager.swift in Sources */,
+				318F6D2823B0F00700652139 /* CountryDetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +513,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		318F6CFA23B0E04B00652139 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				318F6CFB23B0E04B00652139 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		318F6CFF23B0E04C00652139 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,7 +574,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +628,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -432,6 +640,7 @@
 		};
 		318F6D1C23B0E04C00652139 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2207D33F15AF8963D6524745 /* Pods-TelestraPocTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +658,7 @@
 		};
 		318F6D1D23B0E04C00652139 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F86FAB998F2A153B377F7558 /* Pods-TelestraPocTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +676,7 @@
 		};
 		318F6D1F23B0E04C00652139 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75C23E5F4891DBDB59D9853E /* Pods-TelestraPocTaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +698,7 @@
 		};
 		318F6D2023B0E04C00652139 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 472E214EBE54C666ED75BF46 /* Pods-TelestraPocTaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +720,7 @@
 		};
 		318F6D2223B0E04C00652139 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 214FB19A92EC0E867EF5EC7D /* Pods-TelestraPocTask-TelestraPocTaskUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +740,7 @@
 		};
 		318F6D2323B0E04C00652139 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAEC97ACFBBE83A76ADC766B /* Pods-TelestraPocTask-TelestraPocTaskUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
