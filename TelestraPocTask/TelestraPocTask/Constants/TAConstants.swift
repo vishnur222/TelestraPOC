@@ -23,5 +23,9 @@ class TAConstants: NSObject {
         static let serverIssueMsg = "Not able to connect server try agian later"
     }
     
+    struct ConfigdefaultImgName {
+        static let defaultImgName = "default"
+        
+    }
 }
 
