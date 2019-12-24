@@ -44,7 +44,7 @@ class TACountryCustomCellViewTableViewCell: UITableViewCell {
     }()
     
     private let productImage : UIImageView = {
-        let imgView = UIImageView(image: #imageLiteral(resourceName: "download"))
+        let imgView = UIImageView(image: #imageLiteral(resourceName: "default"))
         imgView.contentMode = .scaleAspectFit
         imgView.clipsToBounds = true
         imgView.translatesAutoresizingMaskIntoConstraints = false
