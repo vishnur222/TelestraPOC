@@ -21,6 +21,8 @@ class Constants: NSObject {
         static let noInternetMsg = "Please check your network conectivity"
         static let decodingIssueMsg = "Decoding failure"
         static let serverIssueMsg = "Not able to connect server try agian later"
+        static let alertOkBtn = "Ok"
+        static let alertTitle = "Title"
     }
     
     struct ConfigdefaultImgName {

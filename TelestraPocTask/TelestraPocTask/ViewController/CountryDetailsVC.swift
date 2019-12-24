@@ -25,20 +25,22 @@ lazy var errorMsgLabel : UILabel = {
     return label
 }()
 
-
 override func viewDidLoad() {
     super.viewDidLoad()
-    
-    webServiceManager = WebServiceManager(delegate: self)
-    WebServiceManager(delegate: self).getCountryData()
     setUpNavigation()
     createTableView()
     createRrefreshControl()
 }
 
+    override func viewWillAppear(_ animated: Bool)
+    {
+        webServiceManager = WebServiceManager(delegate: self)
+        WebServiceManager(delegate: self).getCountryData()
+        
+    }
 // MARK: UINavigation setup
 func setUpNavigation() {
-    self.navigationController?.navigationBar.barTintColor = .red
+    self.navigationController?.navigationBar.barTintColor = .lightGray
     self.navigationController?.navigationBar.isTranslucent = false
     self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
 }
@@ -112,8 +114,13 @@ func onSucess(_ tag: NSInteger, with data: ModelTitleHeader){
 }
 
 func onFailure(_ tag: NSInteger, with reason: String){
-    
+    showAlert(title: Constants.ConfigMessageValue.alertTitle, message: reason)
 }
+    func showAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Constants.ConfigMessageValue.alertOkBtn, style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 
