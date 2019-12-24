@@ -10,11 +10,14 @@ import UIKit
 import SDWebImage
 
 class TACountryCustomCellViewTableViewCell: UITableViewCell {
-
+    private let minimumCellHeight: CGFloat = 150
+    private let paddingLeadTop: CGFloat = 10
+    private let paddingTrailBottom: CGFloat = -20
+    private let imageSize = (width: CGFloat(200), height: CGFloat(150))
     var product : TAModelTitleRow? {
         didSet {
             
-            setImage(imageUrl: product?.imageHref, placeHolder: "default")
+            setImage(imageUrl: product?.imageHref, placeHolder: TAConstants.ConfigdefaultImgName.defaultImgName)
             productNameLabel.text = product?.title
             productDescriptionLabel.text = product?.description
         }
@@ -44,7 +47,7 @@ class TACountryCustomCellViewTableViewCell: UITableViewCell {
     }()
     
     private let productImage : UIImageView = {
-        let imgView = UIImageView(image: #imageLiteral(resourceName: "default"))
+        let imgView = UIImageView(image: #imageLiteral(resourceName: TAConstants.ConfigdefaultImgName.defaultImgName))
         imgView.contentMode = .scaleAspectFit
         imgView.clipsToBounds = true
         imgView.translatesAutoresizingMaskIntoConstraints = false
@@ -57,7 +60,6 @@ class TACountryCustomCellViewTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -65,25 +67,27 @@ class TACountryCustomCellViewTableViewCell: UITableViewCell {
         addSubview(productImage)
         addSubview(productNameLabel)
         addSubview(productDescriptionLabel)
-        
+        setcellAutolayout()
+    }
+    
+    func setcellAutolayout()  {
         NSLayoutConstraint.activate([
-            self.heightAnchor.constraint(greaterThanOrEqualToConstant: 50),
+            self.heightAnchor.constraint(greaterThanOrEqualToConstant: minimumCellHeight),
             
-            productImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            productImage.topAnchor.constraint(equalTo: self.topAnchor, constant: paddingLeadTop),
             productImage.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            productImage.widthAnchor.constraint(equalToConstant: 100),
-            productImage.heightAnchor.constraint(equalToConstant: 100),
+            productImage.widthAnchor.constraint(equalToConstant: 200),
+            productImage.heightAnchor.constraint(equalToConstant: 150),
             
-            productNameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            productNameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: paddingLeadTop),
             productNameLabel.topAnchor.constraint(equalTo: productImage.bottomAnchor),
-            productNameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant:  -16),
+            productNameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant:  paddingTrailBottom),
             
             productDescriptionLabel.leadingAnchor.constraint(equalTo: productNameLabel.leadingAnchor),
             productDescriptionLabel.topAnchor.constraint(equalTo: productNameLabel.bottomAnchor, constant: 10),
             productDescriptionLabel.trailingAnchor.constraint(equalTo: productNameLabel.trailingAnchor),
-            productDescriptionLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16)
+            productDescriptionLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: paddingTrailBottom)
         ])
-
     }
     
     required init?(coder aDecoder: NSCoder) {
