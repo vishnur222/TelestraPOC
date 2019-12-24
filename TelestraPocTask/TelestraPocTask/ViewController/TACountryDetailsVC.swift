@@ -13,6 +13,7 @@ class TACountryDetailsVC: UIViewController {
     lazy var countryTableView = UITableView()
     var titleHeader: TAModelTitleHeader!
     var titleRow: [TAModelTitleRow]!
+    var webServiceManager: TAWebServiceManager!
     lazy var refreshControl = UIRefreshControl()
     lazy var errorMsgLabel : UILabel = {
         let label = UILabel()
@@ -27,26 +28,22 @@ class TACountryDetailsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        WebServiceManager.shared.getCountryData(completion: {
-            (data) in
-            self.titleRow = data.rows
-            DispatchQueue.main.async {
-                self.title = data.title
-                self.countryTableView.reloadData()
-            }
-        })
+       
+         webServiceManager = TAWebServiceManager(delegate: self)
+         TAWebServiceManager(delegate: self).getCountryData()
         setUpNavigation()
         createTableView()
         createRrefreshControl()
     }
     
+    // MARK: UINavigation setup
     func setUpNavigation() {
-     //navigationItem.title = "Contacts"
         self.navigationController?.navigationBar.barTintColor = .red
      self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
     }
     
+    // MARK: Tableview creation
     func createTableView(){
             view.addSubview(countryTableView)
         countryTableView.register(UITableViewCell.self, forCellReuseIdentifier: TACountryCustomCellViewTableViewCell.identifierVal)
@@ -63,7 +60,7 @@ class TACountryDetailsVC: UIViewController {
 }
 
 extension TACountryDetailsVC: UITableViewDataSource{
-    
+    // MARK: UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count:Int = titleRow?.count ?? 0
         if(count == 0)
@@ -85,6 +82,7 @@ extension TACountryDetailsVC: UITableViewDataSource{
 }
 
 extension TACountryDetailsVC{
+    // MARK: Custom view and fucntionalities implemented in TableView
     private func createErrorLabel() {
         countryTableView.backgroundView = errorMsgLabel
         errorMsgLabel.text = TAConstants.ConfigMessageValue.initialEmptyMsg
@@ -97,15 +95,24 @@ extension TACountryDetailsVC{
     }
     
     @objc func refresh(sender:AnyObject) {
-        WebServiceManager.shared.getCountryData(completion: {
-                  (data) in
-                  self.titleRow = data.rows
-                  DispatchQueue.main.async {
-                    self.title = data.title
-                    self.countryTableView.reloadData()
-                    self.refreshControl.endRefreshing()
-
-                  }
-              })
+        TAWebServiceManager(delegate: self).getCountryData()
     }
 }
+
+extension TACountryDetailsVC: TAWebServiceManagerDelegate{
+    // MARK: response Sucess/failure call back methods
+    func onSucess(_ tag: NSInteger, with data: TAModelTitleHeader){
+        self.titleRow = data.rows
+        DispatchQueue.main.async {
+            self.title = data.title
+            self.countryTableView.reloadData()
+            self.refreshControl.endRefreshing()
+        }
+    }
+    
+    func onFailure(_ tag: NSInteger, with reason: String){
+        
+    }
+}
+
+

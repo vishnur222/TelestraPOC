@@ -7,27 +7,43 @@
 //
 
 import UIKit
-class WebServiceManager {
 
-    static let shared = WebServiceManager()
-    
-func getCountryData(completion: @escaping (TAModelTitleHeader) -> Void) {
-    
-    guard let apiUrl = URL(string: "https://api.myjson.com/bins/iij5n") else { return }
-    
-    if !TAReachability.isConnectedToNetwork() {
-                print("No net")
-                    return
-            }
-    URLSession.shared.dataTask(with: apiUrl) { (data, response, error) in
-             guard let data = data else { return }
-             do {
-                let decoder = JSONDecoder()
-                let decodedData = try decoder.decode(TAModelTitleHeader.self, from: data)
-                completion(decodedData)
-             } catch let err {
-                 print("Error", err)
-          }
-    }.resume()
-  }
+protocol TAWebServiceManagerDelegate: class {
+    func onSucess(_ tag: NSInteger, with data: TAModelTitleHeader)
+    func onFailure(_ tag: NSInteger, with data: String)
 }
+
+ class TAWebServiceManager {
+    weak var delegate: TAWebServiceManagerDelegate?
+    init(delegate: TAWebServiceManagerDelegate) {
+            self.delegate = delegate
+        }
+     
+    // MARK: getCountryData web service call
+    func getCountryData() {
+        let apiTagVal = ApiTag.getCountryDetails.rawValue
+     guard let apiUrl = URL(string: "https://api.myjson.com/bins/iij5n") else { return }
+     
+     if !TAReachability.isConnectedToNetwork() {
+        self.delegate?.onFailure(apiTagVal, with: TAConstants.ConfigMessageValue.noInternetMsg)
+                     return
+             }
+       
+     URLSession.shared.dataTask(with: apiUrl) { (data, response, error) in
+              guard let data = data else { return }
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == (200)
+               else {
+                self.delegate?.onFailure(apiTagVal, with: TAConstants.ConfigMessageValue.serverIssueMsg)
+                   return  }
+        
+              do {
+                 let decoder = JSONDecoder()
+                 let decodedData = try decoder.decode(TAModelTitleHeader.self, from: data)
+                self.delegate?.onSucess(apiTagVal, with: decodedData)
+              } catch let err {
+                print("Error", err)
+                  self.delegate?.onFailure(apiTagVal, with: TAConstants.ConfigMessageValue.decodingIssueMsg)
+           }
+     }.resume()
+   }
+ }
