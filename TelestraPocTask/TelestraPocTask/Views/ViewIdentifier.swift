@@ -10,8 +10,8 @@ import UIKit
 protocol IdentifierProtocol { }
 
 extension IdentifierProtocol where Self: UIView {
-    static var identifierVal: String {
-        return String(describing: self)
-    }
+  static var identifierVal: String {
+    return String(describing: self)
+  }
 }
 extension UIView: IdentifierProtocol {}
